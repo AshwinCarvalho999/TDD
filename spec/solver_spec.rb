@@ -1,42 +1,50 @@
-require 'spec_helper'
+require_relative '../solver'
+
 describe Solver do
-  let(:solver) { Solver.new }
+  before :each do
+    @solver = Solver.new
+  end
 
-  describe 'Test Factorial method' do
-    it 'This method should return the factorial of integers from 1 -  N' do
-      expect(solver.factorial(5)).to eql(120)
-    end
-    it 'This shouls return 1 if zero is passed in as an integer' do
-      expect(solver.factorial(0)).to eql(1)
-      expect(solver.factorial(0)).to_not eql(0)
+  describe 'testing the factorial' do
+    it 'Takes a number and and returns its factorial' do
+      expect(@solver.factorial(10)).to eq(3_628_800)
     end
 
-    it 'This should return error on negative numbers' do
-      expect(solver.factorial(-1)).to eql('Invalid Number')
+    it 'Takes a number and and returns its factorial' do
+      expect(@solver.factorial(5)).to eq(120)
+    end
+
+    it 'Takes a number and and returns its factorial' do
+      expect(@solver.factorial(0)).to eq(1)
+    end
+
+    it 'returns a message if the integer is negative' do
+      expect(@solver.factorial(-13)).to eq('The number should be positive')
     end
   end
 
-  describe 'This method to reverse words' do
-    it 'returns the reverse of a word' do
-      expect(solver.reverse('Alaa')).to eql('aalA')
+  describe 'testing the reverse of a string' do
+    it 'Takes a string and return the reverse' do
+      expect(@solver.reverse('hello')).to eq('olleh')
+    end
+
+    it 'Takes a number and and returns its factorial' do
+      expect(@solver.reverse(' Amine ')).to eq('enimA')
     end
   end
 
-  describe 'This method for fizzbuzz' do
-    it 'When N is divisible by 3 and 5, return fizzbuzz' do
-      expect(solver.fizzbuzz(15)).to eql('fizzbuzz')
+  describe 'testing the fizzbuzz' do
+    it "Takes a number and check if it's divisible by 3" do
+      expect(@solver.fizzbuzz(12)).to eq('fizz')
     end
-
-    it 'When N is divisible by 3, return fizz' do
-      expect(solver.fizzbuzz(3)).to eql('fizz')
+    it "Takes a number and check if it's divisible by 5" do
+      expect(@solver.fizzbuzz(10)).to eq('buzz')
     end
-
-    it 'When N is divisible by 5, return buzz' do
-      expect(solver.fizzbuzz(5)).to eql('buzz')
+    it "Takes a number and check if it's divisible by 3 and 5" do
+      expect(@solver.fizzbuzz(15)).to eq('fizzbuzz')
     end
-
-    it 'When N is not divisible by 3 or 5' do
-      expect(solver.fizzbuzz(2)).to eql(2)
+    it "Takes a number and check if it's divisible by 3" do
+      expect(@solver.fizzbuzz(11)).to eq(11)
     end
   end
 end

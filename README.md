@@ -37,15 +37,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 OOP school library <a name="about-project"></a>
+# 📖 Test-driven development (TDD)
+<a name="about-project"></a>
 
-> In this project, I am building a school library app using Ruby OOP concepts.
-
+> The idea behind test-driven development (TDD) is that tests are not an afterthought. Also, it makes you think about how your code behaves before starting to code.
 
 ## 🛠 Built With <a name="built-with">
 Ruby</a>
-
-
 
 <!-- Features -->
 
@@ -54,13 +52,11 @@ Ruby</a>
 <<<<<<< HEAD
 > Describe between 1-3 key features of the application.
 
-- **List Books**
-- **List people**
-- **Create person & book**
-=======
-- On exit from your app save all the data (books, people, and rentals) into JSON files. One per type of data you are storing and named accordingly (e.g. rentals.json)
-- On startup of our app it load all the data from files.
->>>>>>> development
+- Write unit tests using Rspec.
+- Understand an existing codebase in a way that allows for adding tests.
+- Write Rspec unit tests with mocks.
+- Understand the TDD concept.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,7 +71,7 @@ Ruby</a>
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,12 +98,9 @@ In the terminal run ruby person.rb and check the results.
 
 In order to run this project you need:
 
-
 ### Setup
 
 Clone this repository to your desired folder:
-
-
 
 ### Install
 
@@ -119,8 +112,6 @@ https://github.com/AshwinCarvalho999/TDD
 To run the project, execute the following command:
 
 ruby main.rb
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
